@@ -14,7 +14,7 @@
        shell: systemctl restart zabbix-proxy
        register: command.restart
        
-     -debug:
+     - debug:
        var: command.psk.stdout_lines
        var: command.config.stdout_lines
        var: command.restart.stdout_lines
