@@ -1,0 +1,10 @@
+---
+
+ - name: talk to all hosts just so we can learn about them
+   hosts: all
+   tasks:   
+   
+     - name: create PSK
+       command: openssl rand -hex 32 > /etc/zabbix/psk.psk | cat /etc/zabbix/psk.psk
+     - name: download new config
+       command: curl https://raw.githubusercontent.com/ITC-jwaltenspuehl/configure-zabbix/main/zabbix_proxy.conf --output /etc/zabbix/zabbix_proxy.conf
