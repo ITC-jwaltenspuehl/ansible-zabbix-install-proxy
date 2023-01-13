@@ -7,6 +7,6 @@
      - name: create PSK
        shell: openssl rand -hex 32 > /etc/zabbix/psk.psk | cat /etc/zabbix/psk.psk
      - name: download new config
-       shell: curl https://raw.githubusercontent.com/ITC-jwaltenspuehl/configure-zabbix/main/zabbix_proxy.conf --output /etc/zabbix/zabbix_proxy.conf
+       shell: curl https://raw.githubusercontent.com/ITC-jwaltenspuehl/ansible-zabbix-install-proxy/main/zabbix_proxy.conf --output /etc/zabbix/zabbix_proxy.conf
      - name: download new config
        shell: systemctl start zabbix-proxy
