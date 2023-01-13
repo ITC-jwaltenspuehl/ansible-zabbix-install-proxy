@@ -15,5 +15,3 @@
        yum:
          name: zabbix-proxy-sqlite3
          state: latest
-     - name: remove default config
-       command: rm -f /etc/zabbix/zabbix_proxy.conf
