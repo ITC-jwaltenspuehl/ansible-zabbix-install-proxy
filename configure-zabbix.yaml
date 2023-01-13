@@ -6,17 +6,17 @@
    
      - name: create PSK
        shell: openssl rand -hex 32 > /etc/zabbix/psk.psk | cat /etc/zabbix/psk.psk
-       register: command.psk
+       register: command_psk
      - name: download new config
        shell: curl https://raw.githubusercontent.com/ITC-jwaltenspuehl/ansible-zabbix-install-proxy/main/zabbix_proxy.conf --output /etc/zabbix/zabbix_proxy.conf
-       register: command.config
+       register: command_config
      - name: restart zabbix services
        shell: systemctl restart zabbix-proxy
-       register: command.restart
+       register: command_restart
        
      - debug:
-       var: command.psk.stdout_lines
+       var: command_psk.stdout_lines
      - debug:
-       var: command.config.stdout_lines
+       var: command_config.stdout_lines
      - debug:
-       var: command.restart.stdout_lines
+       var: command_restart.stdout_lines
