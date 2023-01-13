@@ -9,4 +9,4 @@
      - name: download new config
        shell: curl https://raw.githubusercontent.com/ITC-jwaltenspuehl/ansible-zabbix-install-proxy/main/zabbix_proxy.conf --output /etc/zabbix/zabbix_proxy.conf
      - name: download new config
-       shell: systemctl start zabbix-proxy
+       shell: systemctl restart zabbix-proxy
