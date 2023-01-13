@@ -16,5 +16,7 @@
        
      - debug:
        var: command.psk.stdout_lines
+     - debug:
        var: command.config.stdout_lines
+     - debug:
        var: command.restart.stdout_lines
