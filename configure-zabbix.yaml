@@ -16,7 +16,3 @@
        
      - debug:
                    var: command_psk.stdout_lines
-     - debug:
-                   var: command_config.stdout_lines
-     - debug:
-                   var: command_restart.stdout_lines
