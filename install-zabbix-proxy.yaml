@@ -13,7 +13,7 @@
          state: present
      - name: install Zabbix Repo
        yum:
-         name: zabbix-proxy-sqlite
+         name: zabbix-proxy-sqlite3
          state: latest
      - name: remove default config
        command: rm -f /etc/zabbix/zabbix-proxy.conf
